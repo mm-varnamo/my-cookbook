@@ -10,50 +10,50 @@
 </head>
 
 <body>
+    <div class="container">
+        <header class="header">
+            <img src="src/img/logo-new.png" alt="Logo" class="header__logo" />
+            <form class="search">
+                <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
+                <button class="btn search__btn">
+                    <svg class="search__icon">
+                        <use href="src/img/icons.svg#icon-search"></use>
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </form>
 
-    <header class="header">
-        <img src="src/img/logo-new.png" alt="Logo" class="header__logo" />
-        <form class="search">
-            <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
-            <button class="btn search__btn">
-                <svg class="search__icon">
-                    <use href="src/img/icons.svg#icon-search"></use>
-                </svg>
-                <span>Search</span>
-            </button>
-        </form>
-
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <button class="nav__btn nav__btn--add-recipe">
-                        <svg class="nav__icon">
-                            <use href="src/img/icons.svg#icon-edit"></use>
-                        </svg>
-                        <span>Add recipe</span>
-                    </button>
-                </li>
-                <li class="nav__item">
-                    <button class="nav__btn nav__btn--bookmarks">
-                        <svg class="nav__icon">
-                            <use href="src/img/icons.svg#icon-bookmark"></use>
-                        </svg>
-                        <span>Bookmarks</span>
-                    </button>
-                    <div class="bookmarks">
-                        <ul class="bookmarks__list">
-                            <div class="message">
-                                <div>
-                                    <svg>
-                                        <use href="src/img/icons.svg#icon-smile"></use>
-                                    </svg>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="nav__btn nav__btn--add-recipe">
+                            <svg class="nav__icon">
+                                <use href="src/img/icons.svg#icon-edit"></use>
+                            </svg>
+                            <span>Add recipe</span>
+                        </button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__btn nav__btn--bookmarks">
+                            <svg class="nav__icon">
+                                <use href="src/img/icons.svg#icon-bookmark"></use>
+                            </svg>
+                            <span>Bookmarks</span>
+                        </button>
+                        <div class="bookmarks">
+                            <ul class="bookmarks__list">
+                                <div class="message">
+                                    <div>
+                                        <svg>
+                                            <use href="src/img/icons.svg#icon-smile"></use>
+                                        </svg>
+                                    </div>
+                                    <p>
+                                        No bookmarks yet. Find a nice recipe and bookmark it :)
+                                    </p>
                                 </div>
-                                <p>
-                                    No bookmarks yet. Find a nice recipe and bookmark it :)
-                                </p>
-                            </div>
 
-                            <!-- <li class="preview">
+                                <!-- <li class="preview">
                         <a class="preview__link" href="#23456">
                           <figure class="preview__fig">
                             <img src="src/img/test-1.jpg" alt="Test" />
@@ -66,18 +66,17 @@
                           </div>
                         </a>
                       </li> -->
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="search-results">
-        <ul class="results">
-            <a href="#664c8f193e7aa067e94e863d">RECIPE 1</a>
-            <a href="#5ed6604591c37cdc054bc886">RECIPE 2</a>
-            <!-- <li class="preview">
+        <div class="search-results">
+            <ul class="results">
+
+                <!-- <li class="preview">
                 <a class="preview__link preview__link--active" href="#23456">
                     <figure class="preview__fig">
                         <img src="src/img/test-1.jpg" alt="Test" />
@@ -94,10 +93,10 @@
                 </a>
             </li> -->
 
-        </ul>
+            </ul>
 
-        <div class="pagination">
-            <!-- <button class="btn--inline pagination__btn--prev">
+            <div class="pagination">
+                <!-- <button class="btn--inline pagination__btn--prev">
                 <svg class="search__icon">
                   <use href="src/img/icons.svg#icon-arrow-left"></use>
                 </svg>
@@ -109,17 +108,18 @@
                   <use href="src/img/icons.svg#icon-arrow-right"></use>
                 </svg>
               </button> -->
-        </div>
-
-        <div class="recipe">
-            <div class="message">
-                <div>
-                    <svg>
-                        <use href="src/img/icons.svg#icon-smile"></use>
-                    </svg>
-                </div>
             </div>
-            <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+
+            <div class="recipe">
+                <div class="message">
+                    <div>
+                        <svg>
+                            <use href="src/img/icons.svg#icon-smile"></use>
+                        </svg>
+                    </div>
+                </div>
+                <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+            </div>
         </div>
 </body>
 
