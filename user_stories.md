@@ -1,6 +1,6 @@
 ### User stories for the Cookbook application.
 
-[ ] As a user, I want to **search for recipes**, so that I can find new idea for meals
+[x] As a user, I want to **search for recipes**, so that I can find new idea for meals
 
 [ ] As a user, I want to be able to **update the number of servings**, so that I can cook a meal for different number of people
 
