@@ -3,7 +3,6 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
 	_data;
 	render(data) {
-		console.log(data);
 		if (!data || (Array.isArray(data) && data.length === 0))
 			return this.renderError();
 
@@ -11,6 +10,38 @@ export default class View {
 		const markup = this._generateMarkup();
 		this._clear();
 		this._parentElement.insertAdjacentHTML('afterbegin', markup);
+	}
+
+	update(data) {
+		this._data = data;
+		const newMarkup = this._generateMarkup();
+
+		const newDOM = document.createRange().createContextualFragment(newMarkup);
+		const newElements = Array.from(newDOM.querySelectorAll('*'));
+		const currElements = Array.from(this._parentElement.querySelectorAll('*'));
+
+		console.log(currElements);
+		console.log(newElements);
+
+		newElements.forEach((newEl, i) => {
+			const currEl = currElements[i];
+			console.log(currEl, newEl.isEqualNode(currEl));
+
+			// Update changed text
+			if (
+				!newEl.isEqualNode(currEl) &&
+				newEl.firstChild?.nodeValue.trim() !== ''
+			) {
+				currEl.textContent = newEl.textContent;
+			}
+
+			// Update changed attributes
+			if (!newEl.isEqualNode(currEl)) {
+				Array.from(newEl.attributes).forEach((attr) =>
+					currEl.setAttribute(attr.name, attr.value)
+				);
+			}
+		});
 	}
 
 	_clear() {
