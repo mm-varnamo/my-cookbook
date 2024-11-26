@@ -25,7 +25,6 @@ export default class View {
 
 		newElements.forEach((newEl, i) => {
 			const currEl = currElements[i];
-			console.log(currEl, newEl.isEqualNode(currEl));
 
 			// Update changed text
 			if (
