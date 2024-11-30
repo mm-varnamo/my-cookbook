@@ -3,6 +3,7 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
 	_data;
 	render(data, render = true) {
+		console.log(data);
 		if (!data || (Array.isArray(data) && data.length === 0))
 			return this.renderError();
 
@@ -22,9 +23,6 @@ export default class View {
 		const newDOM = document.createRange().createContextualFragment(newMarkup);
 		const newElements = Array.from(newDOM.querySelectorAll('*'));
 		const currElements = Array.from(this._parentElement.querySelectorAll('*'));
-
-		console.log(currElements);
-		console.log(newElements);
 
 		newElements.forEach((newEl, i) => {
 			const currEl = currElements[i];
